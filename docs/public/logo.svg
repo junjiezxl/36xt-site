@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none">
+  <defs>
+    <!-- Background Gradient: Deep Cosmic Indigo to Tech Cyan -->
+    <linearGradient id="bgGrad" x1="16" y1="12" x2="112" y2="116" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0F172A" />
+      <stop offset="50%" stop-color="#1E3A8A" />
+      <stop offset="100%" stop-color="#0284C7" />
+    </linearGradient>
+    
+    <!-- 36 Glow Gradient -->
+    <linearGradient id="text36Grad" x1="28" y1="36" x2="88" y2="92" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="60%" stop-color="#E0F2FE" />
+      <stop offset="100%" stop-color="#38BDF8" />
+    </linearGradient>
+
+    <!-- Star & Orbit Gold Cyan -->
+    <linearGradient id="starGlow" x1="75" y1="20" x2="105" y2="50" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FDE047" />
+      <stop offset="100%" stop-color="#38BDF8" />
+    </linearGradient>
+  </defs>
+
+  <!-- Squircle Rounded Container -->
+  <rect x="8" y="8" width="112" height="112" rx="28" fill="url(#bgGrad)" />
+  <rect x="8.75" y="8.75" width="110.5" height="110.5" rx="27.25" stroke="#38BDF8" stroke-opacity="0.3" stroke-width="1.5" />
+
+  <!-- Orbit Arc (Connecting Future) -->
+  <path d="M22 84C32 46 72 32 106 44" stroke="#38BDF8" stroke-width="3" stroke-linecap="round" stroke-dasharray="4 6" opacity="0.65" />
+  <circle cx="106" cy="44" r="2.5" fill="#38BDF8" />
+
+  <!-- Stylized "36" Brand Mark -->
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="900" font-style="italic">
+    <!-- Number 3 -->
+    <path d="M30 42H54C56 42 58 44 57 47L51 55C54 55 57 57 57 61C57 69 49 73 40 73C34 73 30 70 29 67L35 63C36 65 38 66 40 66C44 66 48 64 48 60C48 57 45 55 41 55H36L40 49H30V42Z" fill="url(#text36Grad)" />
+    <!-- Number 6 -->
+    <path d="M68 42H88V49H75L71 58C73 56 77 55 81 55C89 55 95 61 95 69C95 78 88 85 79 85C69 85 62 77 62 65C62 53 66 42 68 42ZM78 78C83 78 87 74 87 69C87 64 83 61 78 61C74 61 70 64 70 69C70 74 74 78 78 78Z" fill="url(#text36Grad)" />
+  </g>
+
+  <!-- Polaris Guiding Star (Exploring World) -->
+  <path d="M88 18L91.5 28.5L102 32L91.5 35.5L88 46L84.5 35.5L74 32L84.5 28.5L88 18Z" fill="url(#starGlow)" />
+  <circle cx="42" cy="24" r="2" fill="#BAE6FD" opacity="0.8" />
+  <circle cx="98" cy="74" r="1.5" fill="#FDE047" opacity="0.75" />
+
+  <!-- Subtitle Text "XT" -->
+  <text x="64" y="103" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="800" letter-spacing="3" fill="#93C5FD">
+    36XT.COM
+  </text>
+</svg>

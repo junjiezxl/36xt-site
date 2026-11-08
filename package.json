@@ -1,0 +1,16 @@
+{
+  "name": "36xt-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "36星途 (36xt.com) - 探索世界，连接未来。中国用户海外手机卡、海外银行卡申请与数字游民出海指南",
+  "type": "module",
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "preview": "vitepress preview docs"
+  },
+  "devDependencies": {
+    "vitepress": "^1.6.3",
+    "vue": "^3.5.13"
+  }
+}
