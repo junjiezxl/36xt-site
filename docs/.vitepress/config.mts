@@ -47,7 +47,8 @@ export default defineConfig({
       {
         text: '🏦 海外银行卡',
         items: [
-          { text: '境外账户总览与门槛对比', link: '/bank/' },
+          { text: '账户总览与门槛对比', link: '/bank/' },
+          { text: '2026 香港银行开户全景梯队与避坑', link: '/bank/hk-tier-guide' },
           { text: '赴港开户一日通关（汇丰/中银/众安）', link: '/bank/hk-walk-in' },
           { text: '护照远程直开账户（iFAST/Wise/OCBC）', link: '/bank/remote-accounts' }
         ]
@@ -95,6 +96,7 @@ export default defineConfig({
           text: '🏦 海外银行卡与数字账户',
           items: [
             { text: '账户总览与开户门槛对比', link: '/bank/' },
+            { text: '2026 香港银行开户全景梯队与避坑', link: '/bank/hk-tier-guide' },
             { text: '赴港开户一日通关攻略', link: '/bank/hk-walk-in' },
             { text: '远程护照直开数字账户对比', link: '/bank/remote-accounts' }
           ]
