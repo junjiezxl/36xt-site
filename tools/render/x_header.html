@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    width: 1500px;
+    height: 500px;
+    overflow: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Segoe UI", "Microsoft YaHei", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    background: #0f172a;
+  }
+
+  .banner-canvas {
+    position: relative;
+    width: 1500px;
+    height: 500px;
+    /* Exactly matching user's favorite Blue Night gradient */
+    background: linear-gradient(135deg, #090f1d 0%, #0f1e3d 30%, #1e3a8a 65%, #0284c7 100%);
+    overflow: hidden;
+  }
+
+  /* Starfield / Nebula Glows */
+  .glow-left {
+    position: absolute;
+    top: -120px;
+    left: -100px;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(14, 165, 233, 0.25) 0%, transparent 70%);
+    filter: blur(60px);
+  }
+
+  .glow-right {
+    position: absolute;
+    bottom: -150px;
+    right: -100px;
+    width: 700px;
+    height: 700px;
+    background: radial-gradient(circle, rgba(56, 189, 248, 0.22) 0%, transparent 70%);
+    filter: blur(70px);
+  }
+
+  /* Future Orbit Arc in Background */
+  .orbit-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1500px;
+    height: 500px;
+    pointer-events: none;
+    opacity: 0.55;
+  }
+
+  /* Safe Area layout (Avoiding Left-Bottom Avatar overlap) */
+  /* Avatar occupies approximately: left 40px to 360px, bottom 0 to 220px */
+  .content-container {
+    position: absolute;
+    top: 45px;
+    left: 410px; /* Shifted right to completely avoid avatar occlusion! */
+    right: 50px;
+    bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 10;
+  }
+
+  /* Header Top Title Row */
+  .brand-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .brand-title-wrap {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .main-title {
+    font-size: 38px;
+    font-weight: 950;
+    letter-spacing: 2px;
+    color: #ffffff;
+    line-height: 1.1;
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+  }
+
+  .main-title .en-sub {
+    font-size: 26px;
+    font-weight: 900;
+    color: #38bdf8;
+    letter-spacing: 3px;
+  }
+
+  .slogan-tag {
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #93c5fd;
+    margin-top: 6px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .slogan-tag::before {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #fde047;
+  }
+
+  /* Official Website Pill on Top Right */
+  .domain-pill {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 18px;
+    border-radius: 999px;
+    background: rgba(15, 23, 42, 0.45);
+    border: 1px solid rgba(56, 189, 248, 0.35);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    backdrop-filter: blur(10px);
+  }
+
+  .domain-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #10b981;
+    box-shadow: 0 0 10px #10b981;
+  }
+
+  .domain-text {
+    font-size: 16px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: #f8fafc;
+  }
+
+  /* 3 Core Services Pillars Grid */
+  .pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 18px;
+  }
+
+  .pillar-card {
+    background: rgba(15, 23, 42, 0.42);
+    border: 1px solid rgba(56, 189, 248, 0.22);
+    border-radius: 14px;
+    padding: 16px 18px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 10px 24px -8px rgba(0, 0, 0, 0.35);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .pillar-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .pillar-icon {
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  .pillar-title {
+    font-size: 17px;
+    font-weight: 850;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+  }
+
+  .pillar-desc {
+    font-size: 13px;
+    color: #cbd5e1;
+    line-height: 1.5;
+    font-weight: 500;
+  }
+
+  .pillar-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 10px;
+  }
+
+  .p-tag {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 5px;
+    background: rgba(14, 165, 233, 0.16);
+    color: #38bdf8;
+    border: 1px solid rgba(56, 189, 248, 0.2);
+  }
+
+  /* Footer Guarantee Line */
+  .footer-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 12px;
+    border-top: 1px solid rgba(148, 163, 184, 0.15);
+  }
+
+  .guarantee-list {
+    display: flex;
+    gap: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #94a3b8;
+  }
+
+  .guarantee-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #e2e8f0;
+  }
+
+  .guarantee-item span {
+    color: #fde047;
+  }
+
+  .read-action {
+    font-size: 12px;
+    font-weight: 800;
+    color: #38bdf8;
+    letter-spacing: 1px;
+  }
+</style>
+</head>
+<body>
+
+<div class="banner-canvas">
+  <div class="glow-left"></div>
+  <div class="glow-right"></div>
+
+  <!-- Decorative Orbit Lines & Star -->
+  <svg class="orbit-svg" viewBox="0 0 1500 500" fill="none">
+    <path d="M120 480 C 240 220, 600 90, 1100 130 C 1300 145, 1420 220, 1490 280" stroke="#38bdf8" stroke-width="2.5" stroke-dasharray="6 8" stroke-linecap="round"/>
+    <path d="M450 490 C 700 380, 1150 320, 1460 380" stroke="#0284c7" stroke-width="1.5" stroke-dasharray="4 6" opacity="0.6"/>
+    <!-- Four-point star -->
+    <g transform="translate(1120, 115) scale(0.65)">
+      <path d="M30 0 L36 19 L55 25 L36 31 L30 50 L24 31 L5 25 L24 19 Z" fill="#fde047"/>
+      <circle cx="30" cy="25" r="4" fill="#ffffff"/>
+    </g>
+    <circle cx="950" cy="120" r="3" fill="#bae6fd" opacity="0.8"/>
+    <circle cx="1320" cy="170" r="2.5" fill="#fde047" opacity="0.7"/>
+    <circle cx="380" cy="260" r="2.5" fill="#38bdf8" opacity="0.6"/>
+  </svg>
+
+  <!-- Right-Shifted Content Area (Zero Overlap with Avatar) -->
+  <div class="content-container">
+
+    <!-- Top Brand Area -->
+    <div class="brand-header">
+      <div>
+        <div class="main-title">
+          36星途 <span class="en-sub">36XT</span>
+        </div>
+        <div class="slogan-tag">
+          探索世界 · 连接未来 ｜ 专为华人打造的数字出海与全球通信实操指南
+        </div>
+      </div>
+
+      <div class="domain-pill">
+        <div class="domain-dot"></div>
+        <div class="domain-text">36XT.COM</div>
+      </div>
+    </div>
+
+    <!-- 3 Core Services Pillars -->
+    <div class="pillars-grid">
+
+      <!-- Pillar 1 -->
+      <div class="pillar-card">
+        <div>
+          <div class="pillar-head">
+            <span class="pillar-icon">📱</span>
+            <span class="pillar-title">低成本海外手机卡</span>
+          </div>
+          <div class="pillar-desc">
+            告别封卡与高月租！支持中国护照实名、大陆漫游免费收验证码，年均维护费低至几毛钱。
+          </div>
+        </div>
+        <div class="pillar-tags">
+          <span class="p-tag">菲律宾 DITO (&lt;¥1/年)</span>
+          <span class="p-tag">香港 Club SIM</span>
+          <span class="p-tag">eSIM 方案</span>
+        </div>
+      </div>
+
+      <!-- Pillar 2 -->
+      <div class="pillar-card">
+        <div>
+          <div class="pillar-head">
+            <span class="pillar-icon">🏦</span>
+            <span class="pillar-title">境外银行与数字账户</span>
+          </div>
+          <div class="pillar-desc">
+            全流程肉身赴港发钞大行 0 元开户动线，以及内地足不出户护照远程直开合规持牌数字银行。
+          </div>
+        </div>
+        <div class="pillar-tags">
+          <span class="p-tag">汇丰/中银/众安 一日通关</span>
+          <span class="p-tag">菲律宾 Maya 虚拟卡</span>
+          <span class="p-tag">iFAST</span>
+        </div>
+      </div>
+
+      <!-- Pillar 3 -->
+      <div class="pillar-card">
+        <div>
+          <div class="pillar-head">
+            <span class="pillar-icon">🛡️</span>
+            <span class="pillar-title">风控避坑与养号指南</span>
+          </div>
+          <div class="pillar-desc">
+            零成本调取官方合规英文地址证明（POA），解析反洗钱算法，拒绝中介割韭菜与假材料封户。
+          </div>
+        </div>
+        <div class="pillar-tags">
+          <span class="p-tag">零成本地址证明</span>
+          <span class="p-tag">防关户六不原则</span>
+          <span class="p-tag">全自测打卡</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom Highlights Bar -->
+    <div class="footer-bar">
+      <div class="guarantee-list">
+        <div class="guarantee-item"><span>✓</span> 100% 真实肉身实操</div>
+        <div class="guarantee-item"><span>✓</span> 0 中介套路费</div>
+        <div class="guarantee-item"><span>✓</span> 2026 最新官方政策同步</div>
+        <div class="guarantee-item"><span>✓</span> 纯净干货无任何灰产</div>
+      </div>
+      <div class="read-action">
+        点击简介链接直达完整教程库 ➔
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>
