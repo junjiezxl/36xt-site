@@ -40,8 +40,9 @@ export default defineConfig({
         text: '📱 海外手机卡',
         items: [
           { text: '选卡总览与保号成本对比', link: '/sim/' },
-          { text: '英国 Giffgaff 零月租保号教程', link: '/sim/uk-giffgaff' },
-          { text: '香港 Club SIM 年费 6 港币教程', link: '/sim/hk-clubsim' }
+          { text: '🔥 菲律宾 DITO eSIM 极简保号教程', link: '/sim/ph-dito' },
+          { text: '香港 Club SIM 年费 6 港币教程', link: '/sim/hk-clubsim' },
+          { text: '英国 Giffgaff 保号教程 (封卡预警)', link: '/sim/uk-giffgaff' }
         ]
       },
       {
@@ -79,8 +80,9 @@ export default defineConfig({
           text: '📱 海外手机卡 / eSIM 专区',
           items: [
             { text: '选卡总览与保号年费对比', link: '/sim/' },
-            { text: '英国 Giffgaff 申请与激活全流程', link: '/sim/uk-giffgaff' },
-            { text: '香港 Club SIM 保号与 eSIM 指南', link: '/sim/hk-clubsim' }
+            { text: '🔥 菲律宾 DITO eSIM 极简保号指南', link: '/sim/ph-dito' },
+            { text: '香港 Club SIM 保号与 eSIM 指南', link: '/sim/hk-clubsim' },
+            { text: '英国 Giffgaff 保号教程 (封卡预警)', link: '/sim/uk-giffgaff' }
           ]
         },
         {

@@ -9,18 +9,18 @@ const recommendation = computed(() => {
   const sim =
     device.value === 'esim'
       ? {
-          name: '香港 Club SIM（eSIM）或 英国 Giffgaff（eSIM）',
-          cost: '保号约 HK$6/年（Club SIM）或 £0.6/年（Giffgaff）',
-          reason: '你的手机支持原生 eSIM，无需等待国际平邮，线上付款或 App 内即可秒下卡激活，内地漫游免费收短信。',
-          link: '/sim/hk-clubsim',
-          linkText: '查看 Club SIM 开通指南 →'
+          name: '菲律宾 DITO eSIM 或 香港 Club SIM',
+          cost: 'DITO 年保号 < ¥1/年 · Club SIM 约 HK$6/年',
+          reason: '你的手机支持原生 eSIM，强烈推荐中国护照正规实名的菲律宾 DITO 或香港 Club SIM！抗封号、无月租、大陆漫游免费收验证码，比无实名的英国卡稳定得多。',
+          link: '/sim/ph-dito',
+          linkText: '查看 DITO eSIM 开通指南 →'
         }
       : {
-          name: '英国 Giffgaff 实体 SIM 卡',
-          cost: '免费领卡 · 首充 £10 · 保号约 £0.6/年（每半年发 1 条短信）',
-          reason: '国行双卡手机最稳妥的入门神卡！无需实名证件、支持官网免费平邮到中国大陆地址（或转运），插入国行手机即插即用。',
-          link: '/sim/uk-giffgaff',
-          linkText: '查看 Giffgaff 申请与激活教程 →'
+          name: '实体 eSIM 写卡器（配 DITO / Club SIM）',
+          cost: '芯片几十元 · DITO 年保号 < ¥1/年',
+          reason: '针对国行双实体卡槽手机，目前主流且最稳妥的方案是配一张可擦写 eSIM 芯片（如 5ber/Estk），插进卡槽直接烧录 DITO 或 Club SIM，抗封且年费极低（Giffgaff 近期封卡严重已不推荐）。',
+          link: '/sim/ph-dito',
+          linkText: '查看 DITO 低成本保号教程 →'
         }
 
   const bank =
