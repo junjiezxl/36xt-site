@@ -1,5 +1,5 @@
 :root {
-  /* 星野云居民 Brand Palette: Starfield Sky Blue + Deep Ocean Teal */
+  /* 36星途 Brand Palette: Starfield Sky Blue + Deep Ocean Teal */
   --vp-c-brand-1: #0284c7;
   --vp-c-brand-2: #0369a1;
   --vp-c-brand-3: #0ea5e9;
@@ -15,6 +15,13 @@
     transparent 72%
   );
   --vp-home-hero-image-filter: blur(44px);
+
+  --ht-surface-bg: #f5f7fa;
+  --ht-card-bg: #ffffff;
+  --ht-card-border: #e2e8f0;
+  --ht-highlight-red: #dc2626;
+  --ht-highlight-bg: #fef2f2;
+  --ht-step-bg: #f8fafc;
 }
 
 .dark {
@@ -30,6 +37,53 @@
     rgba(45, 212, 191, 0.2) 50%,
     transparent 75%
   );
+
+  --ht-surface-bg: #0b1120;
+  --ht-card-bg: #111827;
+  --ht-card-border: #1e293b;
+  --ht-highlight-red: #f87171;
+  --ht-highlight-bg: rgba(239, 68, 68, 0.15);
+  --ht-step-bg: #162032;
+}
+
+/* ==========================================================================
+   Haitun-Style Widescreen & Elevated Workspace Layout
+   ========================================================================== */
+@media (min-width: 1280px) {
+  html.ht-widescreen .VPDoc:not(.has-aside) .container,
+  html.ht-widescreen .VPDoc .container {
+    max-width: 1440px !important;
+  }
+
+  html.ht-widescreen .VPDoc .content {
+    max-width: 1020px !important;
+  }
+}
+
+/* Left Sidebar Polish (Haitun-style clean active indicator & pill hover) */
+.VPSidebarItem.level-0 > .item > .text {
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.2px;
+  color: var(--vp-c-text-1) !important;
+}
+
+.VPSidebarItem.level-1 > .item {
+  padding: 4px 10px !important;
+  margin: 2px 0;
+  border-radius: 8px;
+  transition: background-color 0.18s ease, color 0.18s ease;
+}
+
+.VPSidebarItem.level-1 > .item:hover {
+  background-color: var(--vp-c-bg-soft);
+}
+
+.VPSidebarItem.level-1.is-active > .item {
+  background-color: var(--vp-c-brand-soft);
+  border-left: 3px solid var(--vp-c-brand-1);
+  padding-left: 10px !important;
+  font-weight: 600;
 }
 
 /* Home Feature Card Polish */
@@ -42,6 +96,217 @@
   transform: translateY(-3px);
   border-color: var(--vp-c-brand-1) !important;
   box-shadow: 0 10px 28px -12px rgba(2, 132, 199, 0.25);
+}
+
+/* ==========================================================================
+   Haitun-Style Content Cards, Value Headlines & Requirement Lists
+   ========================================================================== */
+.ht-panel {
+  background: var(--ht-card-bg);
+  border: 1px solid var(--ht-card-border);
+  border-radius: 16px;
+  padding: 28px 32px;
+  box-shadow: 0 6px 24px -8px rgba(15, 23, 42, 0.06);
+  margin-bottom: 24px;
+}
+
+@media (max-width: 768px) {
+  .ht-panel {
+    padding: 18px 16px;
+    border-radius: 12px;
+  }
+}
+
+/* Centered Value-Proposition Title (like Haitun Tab 2/3/4/5) */
+.ht-hero-title {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1.45;
+  color: var(--vp-c-text-1);
+  margin: 4px 0 22px !important;
+  padding: 16px 20px;
+  background: linear-gradient(135deg, rgba(2, 132, 199, 0.08) 0%, rgba(13, 148, 136, 0.06) 100%);
+  border: 1px solid rgba(2, 132, 199, 0.2);
+  border-radius: 12px;
+}
+
+.ht-hero-title .ht-red {
+  color: var(--ht-highlight-red);
+}
+
+/* Section Header (要求： / 福利与优势： / 说明：) */
+.ht-section-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--vp-c-text-1);
+  margin: 24px 0 12px !important;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--vp-c-brand-soft);
+}
+
+.ht-section-header::before {
+  content: '';
+  display: inline-block;
+  width: 5px;
+  height: 18px;
+  border-radius: 4px;
+  background: var(--vp-c-brand-1);
+}
+
+/* Haitun-style Clean Bullet List */
+.ht-list {
+  list-style: none !important;
+  padding-left: 0 !important;
+  margin: 12px 0 20px !important;
+}
+
+.ht-list li {
+  position: relative;
+  padding: 10px 14px 10px 32px;
+  margin-bottom: 8px;
+  background: var(--ht-step-bg);
+  border: 1px solid var(--ht-card-border);
+  border-radius: 10px;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.ht-list li::before {
+  content: '•';
+  position: absolute;
+  left: 14px;
+  top: 9px;
+  color: var(--vp-c-brand-1);
+  font-weight: 900;
+  font-size: 18px;
+}
+
+.ht-list.ht-numbered {
+  counter-reset: ht-counter;
+}
+
+.ht-list.ht-numbered li {
+  padding-left: 40px;
+}
+
+.ht-list.ht-numbered li::before {
+  counter-increment: ht-counter;
+  content: counter(ht-counter);
+  left: 12px;
+  top: 12px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--vp-c-brand-1);
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+/* Inline Highlights (like Haitun's bold red/blue callouts) */
+.ht-hl {
+  color: var(--ht-highlight-red);
+  font-weight: 700;
+  background: var(--ht-highlight-bg);
+  padding: 1px 6px;
+  border-radius: 5px;
+}
+
+.ht-hl-blue {
+  color: var(--vp-c-brand-1);
+  font-weight: 700;
+  background: var(--vp-c-brand-soft);
+  padding: 1px 6px;
+  border-radius: 5px;
+}
+
+/* Q&A Grid for Tab 1 (三、是否需要带现金 ... 十二、总结) */
+.ht-qa-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 14px;
+  margin: 16px 0 24px;
+}
+
+.ht-qa-card {
+  background: var(--ht-step-bg);
+  border: 1px solid var(--ht-card-border);
+  border-radius: 12px;
+  padding: 16px 18px;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.ht-qa-card:hover {
+  border-color: var(--vp-c-brand-1);
+  transform: translateY(-2px);
+}
+
+.ht-qa-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--vp-c-brand-1);
+  margin: 0 0 8px !important;
+}
+
+.ht-qa-body {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--vp-c-text-2);
+  margin: 0 !important;
+}
+
+/* Step Flowchart Pills */
+.ht-flow-steps {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 16px 0 22px;
+  padding: 16px;
+  background: var(--ht-step-bg);
+  border: 1px solid var(--ht-card-border);
+  border-radius: 12px;
+}
+
+.ht-flow-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 13px;
+  background: var(--ht-card-bg);
+  border: 1px solid var(--vp-c-brand-1);
+  border-radius: 8px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--vp-c-text-1);
+}
+
+.ht-flow-arrow {
+  color: var(--vp-c-brand-1);
+  font-weight: 700;
+}
+
+/* Article Images: Centered, Rounded, Shadowed & Click-to-Zoom */
+.vp-doc img {
+  display: block;
+  margin: 16px auto;
+  border-radius: 10px;
+  border: 1px solid var(--vp-c-divider);
+  box-shadow: 0 4px 16px -4px rgba(15, 23, 42, 0.08);
+  cursor: zoom-in;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.vp-doc img:hover {
+  box-shadow: 0 8px 24px -4px rgba(2, 132, 199, 0.2);
 }
 
 /* Table readability for SIM & Bank comparisons - Mobile-first horizontal scroll */
@@ -65,14 +330,19 @@
   min-width: 110px;
 }
 
-/* Mobile-specific adjustments (< 768px) */
 @media (max-width: 768px) {
   .vp-doc table {
     font-size: 0.82rem;
   }
-  
-  .vp-doc th, .vp-doc td {
+
+  .vp-doc th,
+  .vp-doc td {
     padding: 8px 10px;
+  }
+
+  .ht-hero-title {
+    font-size: 18px;
+    padding: 12px 14px;
   }
 }
 
