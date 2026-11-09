@@ -1,6 +1,6 @@
 # 境外账户首笔入金与激活避坑：Wise / iFAST / 港卡（2026-11 修正版）
 
-> 📅 **本文核实日期：2026-11-09**。综合 Wise、众安银行、FSCS 等官方页面与 X 上多位用户近一周的实测反馈整理。凡是只有网友说法、没有官方原文的地方，都标注了「网友共识」或「待验证」。
+> 📅 **本文核实日期：2026-11-09**。综合 Wise、众安银行、FSCS 等官方页面与多位用户近一周的实测反馈整理。凡是只有网友说法、没有官方原文的地方，都标注了「网友共识」或「待验证」。
 
 很多人卡在同一个地方：**账户开好了，第一笔钱却进不去**。Wise、iFAST 这类远程账户都要求「首笔同名入金」才算激活；而港卡这边，众安银行 2026 年 11 月起也开始对 SWIFT 汇出收费。本文把这几条路一次讲清。
 
@@ -22,7 +22,7 @@
 - **CNY（人民币）入金**：仅限「有资格从 CNY 汇款」的用户（帮助中心标注 *Only if you're eligible to send money from CNY*）。
 - **HKD 入金**：*Limited to non-Hong Kong personal customers… Approval required, all decisions are final*（需审批，结果不可申诉）。
 
-### X 实测（2026-11-07，@buoyhuang 收到 Wise 三封客服邮件后的修正帖）
+### 网友实测（2026-11-07，有网友收到 Wise 三封客服邮件后的修正）
 - 大陆身份证可以注册个人户并过 KYC，**不需要护照和地址证明**；
 - 从**内地银行购汇电汇港币**到 Wise 的香港入金账号 → **被 Wise 取消并原路人工退回**（手续费和汇差拿不回来）；
 - 「用人民币充值」选项对大陆公民是**灰色不可点**——按 Wise 客服说法，该功能只面向在华工作、有近 3 年纳税记录的**非大陆籍**人士；
@@ -47,16 +47,16 @@
 
 **关于存款保障的更新：** 英国 FSCS 存款保障上限已于 **2025-12-01 从 £85,000 提高到 £120,000**（每人每家持牌机构），iFAST Global Bank 作为英国 PRA 授权银行适用该上限（以 FSCS 官网为准）。
 
-- **开户材料**：近一周多位 X 用户反馈可用**大陆身份证或护照** + 近 3 个月地址证明 + +86 手机号线上申请，审核从几小时到数个工作日不等（网友共识，**以申请页可选证件为准**）。
+- **开户材料**：近一周多位用户反馈可用**大陆身份证或护照** + 近 3 个月地址证明 + +86 手机号线上申请，审核从几小时到数个工作日不等（网友共识，**以申请页可选证件为准**）。
 - **激活规则**：首笔入金**必须来自本人同名账户**，**金额不限**（多位用户一致；官方原文本次未直接打开核对，**待你在 App 入金页复核**）。
-- **常见激活路径（X 用户实测）**：
+- **常见激活路径（网友实测）**：
   1. **已有 Wise**：Wise 英镑余额 → iFAST 英镑账户，走英国 Faster Payments，基本秒到；
   2. **没有任何境外账户**：用内地银行同名跨境电汇（多位用户提到兴业银行「寰宇人生」借记卡有跨境汇款手续费优惠），**建议先汇 100 英镑以内测试**；
   3. 有港卡（如众安）：港卡 → Wise → iFAST，或港卡直接 SWIFT 汇入。
-- **费用（据 X 用户引用 iFAST 官方费用文档 2025-03-27 版，待复核）**：账户维护费 0；英镑 Faster Payments 收发免费；SWIFT 汇入 iFAST 端不收费（中转行可能扣费）；SWIFT 汇出约 GBP £15 / USD $18 / EUR €12 每笔。
+- **费用（据网友引用 iFAST 官方费用文档 2025-03-27 版，待复核）**：账户维护费 0；英镑 Faster Payments 收发免费；SWIFT 汇入 iFAST 端不收费（中转行可能扣费）；SWIFT 汇出约 GBP £15 / USD $18 / EUR €12 每笔。
 
 ::: danger 加密货币出金入金路径：本站不推荐
-近期 X 上流行用加密交易所（如 Neverless 等）同名出金给 iFAST/Wise 激活。也有用户反馈「用某交易所激活 iFAST 被风控」「交易所中文名与银行英文名不一致导致提现失败」。Wise 对加密来源资金尤其敏感。**合规与可解释性优先，新手请走银行同名渠道。**
+近期网上流行用加密交易所（如 Neverless 等）同名出金给 iFAST/Wise 激活。也有用户反馈「用某交易所激活 iFAST 被风控」「交易所中文名与银行英文名不一致导致提现失败」。Wise 对加密来源资金尤其敏感。**合规与可解释性优先，新手请走银行同名渠道。**
 :::
 
 ---
@@ -73,7 +73,7 @@
 
 - 计入「失败笔数」的交易包括：预设/定期转账、eDDA 扣款、现金提款、ZA Card 消费。
 - **ZA Perks 豁免**：Lv1（近 30 天日均总结余 HK$10,000–500,000）**每月前 3 笔 SWIFT 免 HK$70**；Lv2（≥ HK$500,000）SWIFT 全免；Lv1/Lv2 均豁免资金不足手续费。
-- **实操建议**：小额回内地可优先考虑「跨境支付通」（X 用户反馈众安、汇丰、中银香港已支持，**参与银行与额度以各行 App 当日显示为准**），中大额再比较同名人民币电汇与 SWIFT 的实际费用；绑定自动扣款（订阅、eDDA）的卡要保持余额，避免一个月攒够 10 笔失败被扣 HK$120。
+- **实操建议**：小额回内地可优先考虑「跨境支付通」（网友反馈众安、汇丰、中银香港已支持，**参与银行与额度以各行 App 当日显示为准**），中大额再比较同名人民币电汇与 SWIFT 的实际费用；绑定自动扣款（订阅、eDDA）的卡要保持余额，避免一个月攒够 10 笔失败被扣 HK$120。
 
 ---
 
@@ -85,26 +85,5 @@
 ```
 
 ---
-
-## 参考来源
-
-**官方：**
-- 众安银行 · 「个人银行服务收费简介」修改通知（2026-11-01 生效）：https://cdn.zaticdn.com/if/ipage/prd/data/agreement/zh_HK/1000181.pdf
-- 众安银行 · ZA Perks 用户等级权益：https://bank.za.group/hk/za-perks
-- 众安银行 · ZA Perks 等级规则 FAQ：https://bank.za.group/en/faqs/Individuals/Bank_services/ZAPerks_one/6a6afc42512dde273b706726
-- Wise 帮助中心 · 可入金/持有/收款币种：https://wise.com/help/articles/2897238/which-currencies-can-i-add-keep-and-receive-in-my-wise-account
-- Wise 帮助中心 · 如何往账户加钱：https://wise.com/help/articles/2596978/how-do-i-add-money-to-my-account
-- FSCS · 存款保障上限 £120,000（2025-12-01 起）：https://www.fscs.org.uk/what-we-cover/banks-building-societies-credit-unions/deposit-limit/
-- iFAST Global Bank 官网：https://www.ifastgb.com/
-
-**X 实测 / 讨论（2026-10 ~ 11）：**
-- @buoyhuang Wise 激活修正版（三封客服邮件）：https://x.com/buoyhuang/status/2118936322924781777
-- @WesleyKang66 朋友代转港币被 Wise 原路退回：https://x.com/WesleyKang66/status/2119406006086344827
-- @oocc30829898 iFAST GB 开户与费用整理：https://x.com/oocc30829898/status/2118394786566615118
-- @AHAUJDD iFAST 首笔同名、金额不限、兴业寰宇人生激活：https://x.com/AHAUJDD/status/2118536453982740638
-- @PanXing0827 众安 → Wise 英镑 → iFAST 实测：https://x.com/PanXing0827/status/2118283940603859040
-- @niaoshu 兴业寰宇人生激活 Wise/iFAST、加密路径风险：https://x.com/niaoshu/status/2118489696301109312
-- @landiantech 众安 11-01 收费调整整理：https://x.com/landiantech/status/2116387312343077187
-- @taozu203 ZA Perks SWIFT 豁免说明：https://x.com/taozu203/status/2116243504330424624
 
 *更新日期：2026-11-09*
