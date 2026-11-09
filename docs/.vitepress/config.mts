@@ -49,10 +49,14 @@ export default defineConfig({
         text: '🏦 海外银行卡',
         items: [
           { text: '账户总览与门槛对比', link: '/bank/' },
+          { text: '🔥 香港众安银行 ZA Bank 开户教程', link: '/bank/za-bank' },
+          { text: '🔥 澳门蚂蚁银行 Ant Bank 开户教程', link: '/bank/ant-bank-macau' },
           { text: '🔥 菲律宾 Maya 数字银行指南', link: '/bank/ph-maya' },
           { text: '2026 香港银行开户全景梯队与避坑', link: '/bank/hk-tier-guide' },
           { text: '赴港开户一日通关（汇丰/中银/众安）', link: '/bank/hk-walk-in' },
-          { text: '护照远程直开账户（iFAST/Wise/OCBC）', link: '/bank/remote-accounts' }
+          { text: '护照远程直开账户（iFAST/Wise/OCBC）', link: '/bank/remote-accounts' },
+          { text: '汇丰 One 内地预申请+赴港激活', link: '/bank/hk-hsbc-remote' },
+          { text: '首笔入金与激活避坑', link: '/bank/first-deposit' }
         ]
       }
     ],
@@ -99,10 +103,14 @@ export default defineConfig({
           text: '🏦 海外银行卡与数字账户',
           items: [
             { text: '账户总览与开户门槛对比', link: '/bank/' },
+            { text: '🔥 香港众安银行 ZA Bank 开户教程', link: '/bank/za-bank' },
+            { text: '🔥 澳门蚂蚁银行 Ant Bank 开户教程', link: '/bank/ant-bank-macau' },
             { text: '🔥 菲律宾 Maya 数字银行开户', link: '/bank/ph-maya' },
             { text: '2026 香港银行开户全景梯队与避坑', link: '/bank/hk-tier-guide' },
             { text: '赴港开户一日通关攻略', link: '/bank/hk-walk-in' },
-            { text: '远程护照直开数字账户对比', link: '/bank/remote-accounts' }
+            { text: '远程护照直开数字账户对比', link: '/bank/remote-accounts' },
+            { text: '汇丰 One 内地预申请+赴港激活', link: '/bank/hk-hsbc-remote' },
+            { text: '首笔入金与激活避坑（Wise/iFAST/港卡）', link: '/bank/first-deposit' }
           ]
         },
         {
