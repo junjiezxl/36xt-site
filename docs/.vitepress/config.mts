@@ -31,17 +31,20 @@ export default defineConfig({
         text: '🧭 新手 0 到 1 路线图',
         items: [
           { text: '通关总览与打卡清单', link: '/roadmap/' },
+          { text: '🔥 出海工具全家桶总览', link: '/roadmap/toolkit-overview' },
           { text: '第 1 步：核心证件准备', link: '/roadmap/documents' },
           { text: '第 2 步：零成本地址证明', link: '/roadmap/address-proof' },
-          { text: '第 3 步：开卡顺序与防关户指南', link: '/roadmap/order-and-risk' }
+          { text: '第 3 步：开卡顺序与防关户指南', link: '/roadmap/order-and-risk' },
+          { text: '跨境资金闭环（合规版）', link: '/roadmap/compliant-fund-loop' }
         ]
       },
       {
         text: '📱 海外手机卡',
         items: [
           { text: '选卡总览与保号成本对比', link: '/sim/' },
+          { text: '🔥 eSIM / 保号卡横向对比', link: '/sim/esim-compare' },
           { text: '🔥 菲律宾 DITO eSIM 极简保号教程', link: '/sim/ph-dito' },
-          { text: '香港 Club SIM 年费 6 港币教程', link: '/sim/hk-clubsim' },
+          { text: '香港 Club SIM 保号教程', link: '/sim/hk-clubsim' },
           { text: '英国 Giffgaff 保号教程 (封卡预警)', link: '/sim/uk-giffgaff' }
         ]
       },
@@ -51,6 +54,8 @@ export default defineConfig({
           { text: '账户总览与门槛对比', link: '/bank/' },
           { text: '🔥 香港众安银行 ZA Bank 开户教程', link: '/bank/za-bank' },
           { text: '🔥 澳门蚂蚁银行 Ant Bank 开户教程', link: '/bank/ant-bank-macau' },
+          { text: '🔥 香港三卡组合怎么配', link: '/bank/hk-three-card' },
+          { text: '盈透 IBKR 开户合规指南', link: '/broker/ibkr-guide' },
           { text: '🔥 菲律宾 Maya 数字银行指南', link: '/bank/ph-maya' },
           { text: '2026 香港银行开户全景梯队与避坑', link: '/bank/hk-tier-guide' },
           { text: '赴港开户一日通关（汇丰/中银/众安）', link: '/bank/hk-walk-in' },
@@ -67,9 +72,11 @@ export default defineConfig({
           text: '🧭 新手从 0 到 1 出海路线图',
           items: [
             { text: '通关总览与自查清单', link: '/roadmap/' },
+            { text: '🔥 出海工具全家桶总览', link: '/roadmap/toolkit-overview' },
             { text: '1. 核心证件准备与有效期避坑', link: '/roadmap/documents' },
             { text: '2. 海外地址证明获取全攻略', link: '/roadmap/address-proof' },
-            { text: '3. 开卡顺序与风控防关户指南', link: '/roadmap/order-and-risk' }
+            { text: '3. 开卡顺序与风控防关户指南', link: '/roadmap/order-and-risk' },
+            { text: '跨境资金闭环（合规版）', link: '/roadmap/compliant-fund-loop' }
           ]
         },
         {
@@ -85,6 +92,7 @@ export default defineConfig({
           text: '📱 海外手机卡 / eSIM 专区',
           items: [
             { text: '选卡总览与保号年费对比', link: '/sim/' },
+            { text: '🔥 eSIM / 保号卡横向对比', link: '/sim/esim-compare' },
             { text: '🔥 菲律宾 DITO eSIM 极简保号指南', link: '/sim/ph-dito' },
             { text: '香港 Club SIM 保号与 eSIM 指南', link: '/sim/hk-clubsim' },
             { text: '英国 Giffgaff 保号教程 (封卡预警)', link: '/sim/uk-giffgaff' }
@@ -105,6 +113,8 @@ export default defineConfig({
             { text: '账户总览与开户门槛对比', link: '/bank/' },
             { text: '🔥 香港众安银行 ZA Bank 开户教程', link: '/bank/za-bank' },
             { text: '🔥 澳门蚂蚁银行 Ant Bank 开户教程', link: '/bank/ant-bank-macau' },
+            { text: '🔥 香港三卡组合怎么配', link: '/bank/hk-three-card' },
+            { text: '盈透 IBKR 开户合规指南', link: '/broker/ibkr-guide' },
             { text: '🔥 菲律宾 Maya 数字银行开户', link: '/bank/ph-maya' },
             { text: '2026 香港银行开户全景梯队与避坑', link: '/bank/hk-tier-guide' },
             { text: '赴港开户一日通关攻略', link: '/bank/hk-walk-in' },
@@ -120,7 +130,23 @@ export default defineConfig({
             { text: '前置必备：风控防关户守则', link: '/roadmap/order-and-risk' }
           ]
         }
-      ]
+      ],
+      '/broker/': [
+        {
+          text: '📈 境外券商',
+          items: [
+            { text: '盈透 IBKR 开户 + 地址证明合规指南', link: '/broker/ibkr-guide' }
+          ]
+        },
+        {
+          text: '关联阅读',
+          items: [
+            { text: '地址证明怎么弄？', link: '/roadmap/address-proof' },
+            { text: '跨境资金闭环（合规版）', link: '/roadmap/compliant-fund-loop' },
+            { text: '香港三卡组合怎么配', link: '/bank/hk-three-card' }
+          ]
+        }
+      ],
     },
 
     outline: {

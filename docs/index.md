@@ -27,7 +27,7 @@ features:
     linkText: 查看入门路线图
   - icon: 📱
     title: 超低成本海外保号卡
-    details: 横向测评英国 Giffgaff、香港 Club SIM 等热门神卡，年均保号成本低至 ¥6 ~ ¥15，内地漫游免费接收海外验证码。
+    details: 横向测评英国 Giffgaff、香港 Club SIM 等热门神卡，年均保号成本常见约 ￥1 ~ ￥15（视卡种；Club SIM 现行约 HK$15/年），内地漫游免费接收海外验证码。
     link: /sim/
     linkText: 进入手机卡专区
   - icon: 🏦
