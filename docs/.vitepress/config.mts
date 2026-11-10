@@ -29,6 +29,7 @@ const unifiedSidebar = [
     items: [
       { text: '香港三卡组合怎么配', link: '/bank/hk-three-card' },
       { text: '首笔入金与激活避坑', link: '/bank/first-deposit' },
+      { text: '港户入金嘉信与美股资金回流', link: '/bank/schwab-funding' },
       { text: '跨境资金闭环（合规版）', link: '/roadmap/compliant-fund-loop' }
     ]
   },

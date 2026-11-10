@@ -137,6 +137,7 @@
 - [地址证明](/roadmap/address-proof)
 - [防关户守则](/roadmap/order-and-risk)
 - [首笔入金](/bank/first-deposit)
+- [港户入金嘉信与美股资金回流](/bank/schwab-funding)
 - [账户总览](/bank/)
 
 ::: warning 合规声明
