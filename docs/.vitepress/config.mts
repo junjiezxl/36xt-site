@@ -60,7 +60,8 @@ const unifiedSidebar = [
     text: '📈 港美股券商与合规',
     collapsed: false,
     items: [
-      { text: '盈透证券（IBKR）合规指南', link: '/broker/ibkr-guide' }
+      { text: '盈透证券（IBKR）合规指南', link: '/broker/ibkr-guide' },
+      { text: '港美股与港卡防休眠关户', link: '/broker/dormant-account-alert' }
     ]
   }
 ]
