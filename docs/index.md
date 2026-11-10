@@ -28,13 +28,13 @@ features:
   - icon: 🎁
     title: 众安银行 & 澳门蚂蚁开户指南
     details: 香港第一虚拟银行众安（邀请码 CJV889）与澳门蚂蚁银行（邀请码 LPJL4ERW）保姆级图文步骤、迎新福利与必开投资户提醒。
-    link: /bank/?tab=2
+    link: /bank/za-bank
     linkText: 查看开户福利与教程
   - icon: 📱
     title: 10 元海外保号神卡 & eSIM
     details: 实测菲律宾 DITO（10元开卡/年保号不到1元）、香港 Club SIM（+852港卡黄金搭档）与英国 Giffgaff 防封号指南。
     link: /sim/
-    linkText: 进入手机卡选卡工作台
+    linkText: 进入手机卡专区
   - icon: 🧭
     title: 新手从 0 到 1 通关路线图
     details: 按「证件 → 零成本地址证明 → 保号手机卡 → 境外银行 → 同名入金激活」黄金顺序一步步打卡通关，彻底告别被拒批与冻卡。
@@ -47,19 +47,19 @@ features:
 ## ⚡ 热门开卡通道一键直达
 
 <div class="ht-qa-grid" style="margin-top: 16px;">
-  <a href="/bank/?tab=1" class="ht-qa-card" style="text-decoration: none; display: block;">
+  <a href="/bank/" class="ht-qa-card" style="text-decoration: none; display: block;">
     <h4 class="ht-qa-title">🇭🇰 香港银行卡 2 天 1 晚开户全流程</h4>
     <p class="ht-qa-body">中银香港线下当场拿卡 + 众安/恒生/大象/蚂蚁酒店连 Wi-Fi 线上秒开 + 10 大高频问题解答。</p>
   </a>
-  <a href="/bank/?tab=2" class="ht-qa-card" style="text-decoration: none; display: block;">
+  <a href="/bank/za-bank" class="ht-qa-card" style="text-decoration: none; display: block;">
     <h4 class="ht-qa-title">🎁 众安银行 ZA Bank（必开 0 管理费）</h4>
     <p class="ht-qa-body">专属推荐码 <code>CJV889</code>，2,000 港币迎新回赠券包 + 20% 定存加息券 + 必开投资户提醒。</p>
   </a>
-  <a href="/bank/?tab=5" class="ht-qa-card" style="text-decoration: none; display: block;">
+  <a href="/bank/hangseng-bank" class="ht-qa-card" style="text-decoration: none; display: block;">
     <h4 class="ht-qa-title">🏛️ 恒生 / 渣打银行（无需赴港内地见证）</h4>
     <p class="ht-qa-body">无需赴港即可开卡，恒生支持 1 人达标携 3 名直系亲属同开港卡，满期可降级普通户免管理费。</p>
   </a>
-  <a href="/bank/?tab=6" class="ht-qa-card" style="text-decoration: none; display: block;">
+  <a href="/bank/ph-maya" class="ht-qa-card" style="text-decoration: none; display: block;">
     <h4 class="ht-qa-title">🌍 护照远程 0 门槛开卡（Maya / iFAST）</h4>
     <p class="ht-qa-body">内地足不出户，中国护照直开菲律宾 Maya（送虚拟 Visa/万事达 + 英文地址证明）与英国 iFAST 银行。</p>
   </a>

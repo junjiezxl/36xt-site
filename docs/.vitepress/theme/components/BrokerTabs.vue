@@ -5,8 +5,6 @@ import { useRoute } from 'vitepress'
 export interface TabItem {
   id: number
   label: string
-  badge?: string
-  badgeType?: 'hot' | 'free' | 'vip' | 'warn'
 }
 
 const props = defineProps<{
@@ -75,183 +73,154 @@ defineExpose({
 </script>
 
 <template>
-  <div class="ht-workspace">
-    <!-- Desktop & Tablet Horizontal Tab Header (Haitun Style + Beautified) -->
-    <div class="ht-tabs-bar" role="tablist">
+  <div class="ht-broker-card">
+    <!-- Haitun-Style Top Underline Tab Header (No scrollbar, clean flat tabs) -->
+    <div class="ht-tabs-header" role="tablist">
       <button
         v-for="tab in tabs"
         :key="tab.id"
         type="button"
         role="tab"
         :aria-selected="activeTab === tab.id"
-        :class="['ht-tab-btn', { active: activeTab === tab.id }]"
+        :class="['ht-tab-item', { 'is-active': activeTab === tab.id }]"
         @click="selectTab(tab.id)"
       >
-        <span class="ht-tab-label">{{ tab.label }}</span>
-        <span
-          v-if="tab.badge"
-          :class="['ht-tab-badge', `is-${tab.badgeType || 'hot'}`]"
-        >
-          {{ tab.badge }}
-        </span>
+        {{ tab.label }}
       </button>
     </div>
 
-    <!-- Mobile Quick Selector Bar (< 768px) -->
+    <!-- Mobile Quick Dropdown (< 768px) -->
     <div class="ht-mobile-selector">
-      <label class="ht-mobile-label">当前查看栏目：</label>
-      <div class="ht-select-wrap">
-        <select :value="activeTab" @change="onSelectChange" class="ht-select">
-          <option v-for="tab in tabs" :key="tab.id" :value="tab.id">
-            {{ tab.id }}. {{ tab.label }}{{ tab.badge ? ` (${tab.badge})` : '' }}
-          </option>
-        </select>
-      </div>
+      <select :value="activeTab" @change="onSelectChange" class="ht-select">
+        <option v-for="tab in tabs" :key="tab.id" :value="tab.id">
+          {{ tab.label }}
+        </option>
+      </select>
     </div>
 
-    <!-- Tab Content Panels -->
-    <div class="ht-tab-panels">
+    <!-- Tab Body Content -->
+    <div class="ht-tabs-body">
       <slot :activeTab="activeTab" :selectTab="selectTab" :copyCode="copyCode" :copiedCode="copiedCode" />
     </div>
   </div>
 </template>
 
 <style scoped>
-.ht-workspace {
-  margin-top: 4px;
+.ht-broker-card {
+  background: var(--ht-card-bg, #ffffff);
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--ht-card-border, #e5e7eb);
+  overflow: hidden;
 }
 
-.ht-tabs-bar {
+.ht-tabs-header {
   display: flex;
-  flex-wrap: nowrap;
-  gap: 8px;
-  overflow-x: auto;
-  padding: 6px 6px;
-  margin-bottom: 24px;
-  background: var(--vp-c-bg-soft);
-  border: 1px solid var(--vp-c-divider);
-  border-radius: 12px;
-  scrollbar-width: thin;
-  position: sticky;
-  top: calc(var(--vp-nav-height, 64px) + 8px);
-  z-index: 20;
-  backdrop-filter: blur(12px);
-  box-shadow: 0 4px 16px -6px rgba(15, 23, 42, 0.08);
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+  padding: 0 24px;
+  background: var(--ht-card-bg, #ffffff);
+  border-bottom: 2px solid #e4e7ed;
 }
 
-.ht-tab-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 9px 16px;
-  border-radius: 8px;
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--vp-c-text-2);
+.dark .ht-tabs-header {
+  border-bottom-color: #1e293b;
+}
+
+.ht-tab-item {
+  position: relative;
+  height: 56px;
+  line-height: 56px;
+  padding: 0 18px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #606266;
   background: transparent;
-  border: 1px solid transparent;
+  border: none;
   cursor: pointer;
   white-space: nowrap;
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 0.2s ease;
 }
 
-.ht-tab-btn:hover {
-  color: var(--vp-c-brand-1);
-  background: var(--vp-c-bg);
+.dark .ht-tab-item {
+  color: #94a3b8;
 }
 
-.ht-tab-btn.active {
-  color: #ffffff;
-  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
-  border-color: rgba(255, 255, 255, 0.15);
-  box-shadow: 0 4px 12px -2px rgba(2, 132, 199, 0.38);
+.ht-tab-item:hover {
+  color: #2563eb;
 }
 
-.dark .ht-tab-btn.active {
-  background: linear-gradient(135deg, #0284c7 0%, #0ea5e9 100%);
+.dark .ht-tab-item:hover {
+  color: #38bdf8;
 }
 
-.ht-tab-badge {
-  display: inline-block;
-  padding: 1px 6px;
-  font-size: 11px;
-  font-weight: 700;
-  line-height: 1.4;
-  border-radius: 999px;
+.ht-tab-item.is-active {
+  color: #1e293b;
+  font-weight: 600;
 }
 
-.ht-tab-badge.is-hot {
-  background: #fee2e2;
-  color: #dc2626;
+.dark .ht-tab-item.is-active {
+  color: #f8fafc;
 }
 
-.ht-tab-badge.is-free {
-  background: #dcfce7;
-  color: #15803d;
+.ht-tab-item.is-active::after {
+  content: '';
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  bottom: -2px;
+  height: 3px;
+  background-color: #3b82f6;
+  border-radius: 2px;
 }
 
-.ht-tab-badge.is-vip {
-  background: #fef3c7;
-  color: #b45309;
-}
-
-.ht-tab-badge.is-warn {
-  background: #ffedd5;
-  color: #c2410c;
-}
-
-.ht-tab-btn.active .ht-tab-badge {
-  background: rgba(255, 255, 255, 0.22);
-  color: #ffffff;
+.ht-tabs-body {
+  padding: 28px 32px;
 }
 
 .ht-mobile-selector {
   display: none;
-  margin-bottom: 18px;
-  padding: 10px 14px;
-  background: var(--vp-c-bg-soft);
-  border: 1px solid var(--vp-c-divider);
-  border-radius: 10px;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
-}
-
-.ht-mobile-label {
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--vp-c-text-2);
-  white-space: nowrap;
-}
-
-.ht-select-wrap {
-  flex: 1;
+  padding: 12px 16px 0;
 }
 
 .ht-select {
   width: 100%;
-  padding: 7px 10px;
-  font-size: 14px;
+  padding: 9px 12px;
+  font-size: 15px;
   font-weight: 600;
   color: var(--vp-c-text-1);
-  background: var(--vp-c-bg);
-  border: 1px solid var(--vp-c-brand-1);
+  background: var(--vp-c-bg-soft);
+  border: 1px solid #3b82f6;
   border-radius: 8px;
   outline: none;
 }
 
 @media (max-width: 768px) {
+  .ht-tabs-header {
+    padding: 0 10px;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    scrollbar-width: none;
+  }
+  .ht-tabs-header::-webkit-scrollbar {
+    display: none;
+  }
+  .ht-tab-item {
+    height: 48px;
+    line-height: 48px;
+    padding: 0 12px;
+    font-size: 14px;
+  }
+  .ht-tab-item.is-active::after {
+    left: 12px;
+    right: 12px;
+  }
   .ht-mobile-selector {
-    display: flex;
+    display: block;
   }
-  .ht-tabs-bar {
-    position: static;
-    padding: 5px;
-    margin-bottom: 16px;
-  }
-  .ht-tab-btn {
-    padding: 7px 12px;
-    font-size: 13px;
+  .ht-tabs-body {
+    padding: 18px 16px;
   }
 }
 </style>

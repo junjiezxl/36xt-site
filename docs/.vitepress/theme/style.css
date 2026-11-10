@@ -47,43 +47,77 @@
 }
 
 /* ==========================================================================
-   Haitun-Style Widescreen & Elevated Workspace Layout
+   Widescreen & Spacious Content Area
    ========================================================================== */
+@media (min-width: 960px) {
+  .VPDoc .content-container {
+    max-width: 860px !important;
+  }
+}
+
 @media (min-width: 1280px) {
   html.ht-widescreen .VPDoc:not(.has-aside) .container,
   html.ht-widescreen .VPDoc .container {
-    max-width: 1440px !important;
+    max-width: 1520px !important;
   }
 
-  html.ht-widescreen .VPDoc .content {
-    max-width: 1020px !important;
+  html.ht-widescreen .VPDoc .content,
+  html.ht-widescreen .VPDoc .content-container {
+    max-width: 1080px !important;
   }
 }
 
-/* Left Sidebar Polish (Haitun-style clean active indicator & pill hover) */
+/* ==========================================================================
+   Beautified Left Sidebar Navigation (Haitun-style Solid Blue Active Pill)
+   ========================================================================== */
+.VPSidebar {
+  background-color: var(--vp-c-bg) !important;
+  border-right: 1px solid var(--vp-c-divider) !important;
+}
+
+.VPSidebarItem.level-0 {
+  padding-bottom: 10px !important;
+}
+
 .VPSidebarItem.level-0 > .item > .text {
   font-size: 14px !important;
   font-weight: 700 !important;
-  letter-spacing: 0.2px;
   color: var(--vp-c-text-1) !important;
+  padding: 6px 0 4px !important;
 }
 
 .VPSidebarItem.level-1 > .item {
-  padding: 4px 10px !important;
-  margin: 2px 0;
+  padding: 7px 12px !important;
+  margin: 3px 0;
   border-radius: 8px;
-  transition: background-color 0.18s ease, color 0.18s ease;
+  transition: all 0.2s ease;
+}
+
+.VPSidebarItem.level-1 > .item > .link > .text {
+  font-size: 14px !important;
+  line-height: 1.4 !important;
 }
 
 .VPSidebarItem.level-1 > .item:hover {
-  background-color: var(--vp-c-bg-soft);
+  background-color: #dbeafe;
+}
+
+.dark .VPSidebarItem.level-1 > .item:hover {
+  background-color: rgba(56, 189, 248, 0.14);
 }
 
 .VPSidebarItem.level-1.is-active > .item {
-  background-color: var(--vp-c-brand-soft);
-  border-left: 3px solid var(--vp-c-brand-1);
-  padding-left: 10px !important;
-  font-weight: 600;
+  background: linear-gradient(135deg, #2563eb 0%, #0284c7 100%) !important;
+  box-shadow: 0 3px 10px -2px rgba(37, 99, 235, 0.35);
+}
+
+.VPSidebarItem.level-1.is-active > .item > .link > .text {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+}
+
+.VPSidebarItem.level-1.is-active > .item > .indicator {
+  display: none !important;
 }
 
 /* Home Feature Card Polish */
@@ -104,10 +138,10 @@
 .ht-panel {
   background: var(--ht-card-bg);
   border: 1px solid var(--ht-card-border);
-  border-radius: 16px;
+  border-radius: 14px;
   padding: 28px 32px;
-  box-shadow: 0 6px 24px -8px rgba(15, 23, 42, 0.06);
-  margin-bottom: 24px;
+  box-shadow: 0 4px 20px -6px rgba(15, 23, 42, 0.06);
+  margin: 16px 0 24px;
 }
 
 @media (max-width: 768px) {
@@ -117,14 +151,14 @@
   }
 }
 
-/* Centered Value-Proposition Title (like Haitun Tab 2/3/4/5) */
+/* Centered Value-Proposition Title */
 .ht-hero-title {
   text-align: center;
-  font-size: 22px;
+  font-size: 21px;
   font-weight: 800;
   line-height: 1.45;
   color: var(--vp-c-text-1);
-  margin: 4px 0 22px !important;
+  margin: 0 0 22px !important;
   padding: 16px 20px;
   background: linear-gradient(135deg, rgba(2, 132, 199, 0.08) 0%, rgba(13, 148, 136, 0.06) 100%);
   border: 1px solid rgba(2, 132, 199, 0.2);
@@ -211,7 +245,7 @@
   line-height: 1;
 }
 
-/* Inline Highlights (like Haitun's bold red/blue callouts) */
+/* Inline Highlights */
 .ht-hl {
   color: var(--ht-highlight-red);
   font-weight: 700;
@@ -228,7 +262,7 @@
   border-radius: 5px;
 }
 
-/* Q&A Grid for Tab 1 (三、是否需要带现金 ... 十二、总结) */
+/* Q&A Grid */
 .ht-qa-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

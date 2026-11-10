@@ -6,8 +6,6 @@
   bankName="蚂蚁银行（澳门）Ant Bank Macau"
   code="LPJL4ERW"
   note="开户或开通证券（财富）账户时，在「邀请码」一栏填入 8 位邀请码 LPJL4ERW（务必在首笔达标入金之前绑定）。"
-  guideLink="/bank/?tab=3"
-  guideText="← 返回港卡开户工作台"
 />
 
 ::: warning 先分清楚：这里说的是「澳门」的蚂蚁银行

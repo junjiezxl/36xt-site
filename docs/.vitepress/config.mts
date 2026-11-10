@@ -2,49 +2,63 @@ import { defineConfig } from 'vitepress'
 
 const unifiedSidebar = [
   {
-    text: '🏦 港卡开户与海外银行',
+    text: '🏦 港卡开户',
     collapsed: false,
     items: [
-      { text: '🔥 港卡开户总工作台 (全流程/见证)', link: '/bank/' },
-      { text: '众安银行 ZA Bank 开户与福利', link: '/bank/za-bank' },
-      { text: '蚂蚁银行（澳门）开户与福利', link: '/bank/ant-bank-macau' },
-      { text: '菲律宾 Maya 数字银行 (护照0门槛)', link: '/bank/ph-maya' },
-      { text: '赴港开户一日通关 (中银/汇丰/众安)', link: '/bank/hk-walk-in' },
-      { text: '汇丰 One 内地预申请+赴港激活', link: '/bank/hk-hsbc-remote' },
-      { text: '护照远程直开账户 (iFAST / Wise)', link: '/bank/remote-accounts' },
+      { text: '香港银行卡开户全流程', link: '/bank/' },
+      { text: '众安银行（ZA Bank）', link: '/bank/za-bank' },
+      { text: '蚂蚁银行（澳门）', link: '/bank/ant-bank-macau' },
+      { text: '渣打银行（免赴港见证）', link: '/bank/sc-bank' },
+      { text: '恒生银行（免赴港·1带3）', link: '/bank/hangseng-bank' },
+      { text: '汇丰银行（内地预申+激活）', link: '/bank/hk-hsbc-remote' },
+      { text: '赴港开户一日通关攻略', link: '/bank/hk-walk-in' },
+      { text: '18家香港银行对比总表', link: '/bank/hk-tier-guide' }
+    ]
+  },
+  {
+    text: '🌍 远程 0 门槛银行卡',
+    collapsed: false,
+    items: [
+      { text: '菲律宾 Maya 数字银行', link: '/bank/ph-maya' },
+      { text: '英国 iFAST / Wise 远程开户', link: '/bank/remote-accounts' }
+    ]
+  },
+  {
+    text: '💳 港卡使用与入金',
+    collapsed: false,
+    items: [
       { text: '香港三卡组合怎么配', link: '/bank/hk-three-card' },
-      { text: '首笔入金与激活避坑 (Wise/iFAST)', link: '/bank/first-deposit' },
-      { text: '18家香港银行全景梯队与管理费', link: '/bank/hk-tier-guide' }
+      { text: '首笔入金与激活避坑', link: '/bank/first-deposit' },
+      { text: '跨境资金闭环（合规版）', link: '/roadmap/compliant-fund-loop' }
     ]
   },
   {
-    text: '📱 海外手机卡与 eSIM',
+    text: '📱 海外手机卡 / eSIM',
     collapsed: false,
     items: [
-      { text: '🔥 手机卡选卡工作台 (总览/速查)', link: '/sim/' },
-      { text: '菲律宾 DITO eSIM (10元抗封首选)', link: '/sim/ph-dito' },
-      { text: '香港 Club SIM (+852港卡黄金搭档)', link: '/sim/hk-clubsim' },
-      { text: 'eSIM / 保号卡横向深度对比', link: '/sim/esim-compare' },
-      { text: '英国 Giffgaff 保号 (2026封卡预警)', link: '/sim/uk-giffgaff' }
+      { text: '海外手机卡选卡总览', link: '/sim/' },
+      { text: '菲律宾 DITO（10元神卡）', link: '/sim/ph-dito' },
+      { text: '香港 Club SIM（港卡搭档）', link: '/sim/hk-clubsim' },
+      { text: '英国 Giffgaff（封卡预警）', link: '/sim/uk-giffgaff' },
+      { text: 'eSIM / 保号卡横向对比', link: '/sim/esim-compare' }
     ]
   },
   {
-    text: '🧭 新手 0→1 出海路线图',
+    text: '🧭 新手 0→1 出海路线',
     collapsed: false,
     items: [
-      { text: '🔥 新手 6 步通关工作台 (打卡表)', link: '/roadmap/' },
-      { text: '出海工具全家桶一条龙总览', link: '/roadmap/toolkit-overview' },
-      { text: '1. 核心证件准备与有效期避坑', link: '/roadmap/documents' },
-      { text: '2. 零成本地址证明获取全攻略', link: '/roadmap/address-proof' },
-      { text: '3. 开卡顺序与风控防关户守则', link: '/roadmap/order-and-risk' },
-      { text: '4. 跨境资金闭环（合规版）', link: '/roadmap/compliant-fund-loop' }
+      { text: '新手 6 步通关打卡表', link: '/roadmap/' },
+      { text: '出海工具全家桶总览', link: '/roadmap/toolkit-overview' },
+      { text: '1. 核心证件准备与避坑', link: '/roadmap/documents' },
+      { text: '2. 零成本地址证明攻略', link: '/roadmap/address-proof' },
+      { text: '3. 开卡顺序与防关户', link: '/roadmap/order-and-risk' }
     ]
   },
   {
-    text: '📈 境外券商与合规指南',
+    text: '📈 港美股券商与合规',
     collapsed: false,
     items: [
-      { text: '盈透 IBKR 开户与地址证明合规指南', link: '/broker/ibkr-guide' }
+      { text: '盈透证券（IBKR）合规指南', link: '/broker/ibkr-guide' }
     ]
   }
 ]
@@ -76,41 +90,12 @@ export default defineConfig({
 
     nav: [
       { text: '首页', link: '/' },
-      {
-        text: '🏦 港卡与海外银行',
-        items: [
-          { text: '🔥 港卡开户全流程 (2天1晚通关)', link: '/bank/' },
-          { text: '🎁 众安银行 ZA Bank 开户与福利', link: '/bank/za-bank' },
-          { text: '🎁 蚂蚁银行（澳门）开户与福利', link: '/bank/ant-bank-macau' },
-          { text: '🇵🇭 菲律宾 Maya 数字银行 (0门槛)', link: '/bank/ph-maya' },
-          { text: '🛫 汇丰 One 内地预申请+赴港激活', link: '/bank/hk-hsbc-remote' },
-          { text: '🇬🇧 护照远程直开 (iFAST / Wise)', link: '/bank/remote-accounts' },
-          { text: '⚡ 首笔入金与激活避坑指南', link: '/bank/first-deposit' },
-          { text: '📊 18家香港银行全景梯队总表', link: '/bank/hk-tier-guide' }
-        ]
-      },
-      {
-        text: '📱 海外手机卡',
-        items: [
-          { text: '🔥 手机卡选卡总览与保号对比', link: '/sim/' },
-          { text: '🇵🇭 菲律宾 DITO eSIM (10元开卡)', link: '/sim/ph-dito' },
-          { text: '🇭🇰 香港 Club SIM (港卡黄金搭档)', link: '/sim/hk-clubsim' },
-          { text: '📊 eSIM / 保号卡横向对比', link: '/sim/esim-compare' },
-          { text: '🇬🇧 英国 Giffgaff (封卡预警)', link: '/sim/uk-giffgaff' }
-        ]
-      },
-      {
-        text: '🧭 新手 0→1 路线图',
-        items: [
-          { text: '🔥 新手 6 步通关总览与打卡表', link: '/roadmap/' },
-          { text: '🧰 出海工具全家桶一条龙', link: '/roadmap/toolkit-overview' },
-          { text: '1. 核心证件准备与有效期避坑', link: '/roadmap/documents' },
-          { text: '2. 零成本地址证明获取全攻略', link: '/roadmap/address-proof' },
-          { text: '3. 开卡顺序与风控防关户守则', link: '/roadmap/order-and-risk' },
-          { text: '4. 跨境资金闭环（合规版）', link: '/roadmap/compliant-fund-loop' }
-        ]
-      },
-      { text: '📈 券商合规指南', link: '/broker/ibkr-guide' }
+      { text: '🏦 港卡开户', link: '/bank/', activeMatch: '^/bank/(?!ph-maya|remote-accounts|hk-three-card|first-deposit)' },
+      { text: '🌍 远程银行卡', link: '/bank/ph-maya', activeMatch: '^/bank/(ph-maya|remote-accounts)' },
+      { text: '💳 港卡使用', link: '/bank/hk-three-card', activeMatch: '^/bank/(hk-three-card|first-deposit)' },
+      { text: '📱 海外手机卡', link: '/sim/', activeMatch: '^/sim/' },
+      { text: '🧭 新手路线图', link: '/roadmap/', activeMatch: '^/roadmap/' },
+      { text: '📈 券商合规', link: '/broker/ibkr-guide', activeMatch: '^/broker/' }
     ],
 
     sidebar: {
