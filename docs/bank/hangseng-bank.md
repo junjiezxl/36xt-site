@@ -33,7 +33,7 @@ description: 恒生银行免赴港内地见证开户要求、50万日均3个月�
 <ul class="ht-list">
   <li>想同时看渣打香港 / 新加坡见证开户？👉 查看 <a href="/bank/sc-bank"><strong>《渣打银行：无需赴港内地见证开卡》</strong></a></li>
   <li>近期能去一趟香港，想 0 门槛免费办齐中银香港 + 众安银行？👉 查看 <a href="/bank/"><strong>《香港银行卡开户全流程（2天1晚通关）》</strong></a></li>
-  <li>想 0 存款、不出国门用护照远程开卡？👉 查看 <a href="/bank/ph-maya"><strong>《菲律宾 Maya 数字银行》</strong></a> 或 <a href="/bank/remote-accounts"><strong>《英国 iFAST 银行远程开户》</strong></a></li>
+  <li>想 0 存款、不出国门用护照远程开卡？👉 查看 <a href="/bank/ph-maya"><strong>《菲律宾 Maya 数字银行》</strong></a> 或 <a href="/bank/ifast-global-bank"><strong>《英国 iFAST Global Bank 远程开户》</strong></a></li>
 </ul>
 
 </div>

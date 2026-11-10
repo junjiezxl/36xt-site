@@ -20,6 +20,7 @@ const unifiedSidebar = [
     collapsed: false,
     items: [
       { text: '菲律宾 Maya 数字银行', link: '/bank/ph-maya' },
+      { text: '英国 iFAST Global Bank', link: '/bank/ifast-global-bank' },
       { text: '英国 iFAST / Wise 远程开户', link: '/bank/remote-accounts' }
     ]
   },
@@ -91,8 +92,8 @@ export default defineConfig({
 
     nav: [
       { text: '首页', link: '/' },
-      { text: '🏦 港卡开户', link: '/bank/', activeMatch: '^/bank/(?!ph-maya|remote-accounts|hk-three-card|first-deposit)' },
-      { text: '🌍 远程银行卡', link: '/bank/ph-maya', activeMatch: '^/bank/(ph-maya|remote-accounts)' },
+      { text: '🏦 港卡开户', link: '/bank/', activeMatch: '^/bank/(?!ph-maya|remote-accounts|ifast-global-bank|hk-three-card|first-deposit)' },
+      { text: '🌍 远程银行卡', link: '/bank/ph-maya', activeMatch: '^/bank/(ph-maya|remote-accounts|ifast-global-bank)' },
       { text: '💳 港卡使用', link: '/bank/hk-three-card', activeMatch: '^/bank/(hk-three-card|first-deposit)' },
       { text: '📱 海外手机卡', link: '/sim/', activeMatch: '^/sim/' },
       { text: '🧭 新手路线图', link: '/roadmap/', activeMatch: '^/roadmap/' },
@@ -127,7 +128,7 @@ export default defineConfig({
             buttonAriaLabel: '搜索教程'
           },
           modal: {
-            noResultsText: '未找到相关教程，试试搜索“众安”“恒生”“DITO”“Maya”或“地址证明”',
+            noResultsText: '未找到相关教程，试试搜索“众安”“恒生”“DITO”“Maya”“iFAST”或“地址证明”',
             resetButtonTitle: '清空搜索条件',
             footer: {
               selectText: '跳转',

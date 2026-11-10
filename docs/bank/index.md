@@ -21,7 +21,7 @@ description: 香港银行卡2天1晚开户完整流程：中银香港线下当�
   <li><strong>核心组合足够用：</strong>拥有<strong>中银香港 + 众安银行 + 恒生 + 大象 + 蚂蚁（香港）</strong>后，无论日常跨境转账、港美股投资还是海外消费都完全足够了（详细分工可见左侧菜单 <a href="/bank/hk-three-card">《香港三卡组合怎么配》</a>）。</li>
   <li><strong>⚠️ 汇丰银行最新变化（2026年1月1日起）：</strong>之前汇丰 One 是必办卡，但从 <span class="ht-hl">2026 年 1 月 1 日开始新开的汇丰 One（非香港身份证），若过去 3 个月平均资产低于 1 万港币，会收取 100 港币/月管理费</span>（2026 年前开的老户不受影响）。如果你不打算在汇丰长期放 1 万港币以上，完全可以不开汇丰，优先用 <strong>0 管理费的中银香港 + 众安银行</strong>。</li>
   <li><strong>顺路澳门加餐：</strong>如果你的行程还顺路去澳门旅游，可以在澳门把 <a href="/bank/ant-bank-macau"><strong>蚂蚁银行（澳门）</strong></a> 也一并开了，同样 0 管理费且活动福利丰厚。</li>
-  <li><strong>不想去香港怎么办？：</strong>如果你没时间去香港，可以直接看左侧导航的 <a href="/bank/hangseng-bank"><strong>《恒生银行（免赴港见证）》</strong></a>、<a href="/bank/sc-bank"><strong>《渣打银行（免赴港见证）》</strong></a>，或者 0 门槛用护照远程直开 <a href="/bank/ph-maya"><strong>《菲律宾 Maya 银行》</strong></a> 与 <a href="/bank/remote-accounts"><strong>《英国 iFAST 银行》</strong></a>。</li>
+  <li><strong>不想去香港怎么办？：</strong>如果你没时间去香港，可以直接看左侧导航的 <a href="/bank/hangseng-bank"><strong>《恒生银行（免赴港见证）》</strong></a>、<a href="/bank/sc-bank"><strong>《渣打银行（免赴港见证）》</strong></a>，或者 0 门槛用护照远程直开 <a href="/bank/ph-maya"><strong>《菲律宾 Maya 银行》</strong></a> 与 <a href="/bank/ifast-global-bank"><strong>《英国 iFAST Global Bank》</strong></a>。</li>
 </ul>
 
 <div class="ht-flow-steps">

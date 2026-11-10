@@ -31,7 +31,7 @@ description: 渣打银行香港/新加坡账户内地见证开卡要求、50万�
 <ul class="ht-list">
   <li>想对比另一家支持「1 人达标携 3 名直系亲属同开」的免赴港银行？👉 查看 <a href="/bank/hangseng-bank"><strong>《恒生银行：无需赴港内地见证开卡（可3人同开）》</strong></a></li>
   <li>近期能抽周末去一趟香港，想 0 存款门槛免费开卡？👉 查看 <a href="/bank/"><strong>《香港银行卡开户全流程（2天1晚0门槛通关）》</strong></a></li>
-  <li>不想存 50 万也不想去香港，想用护照 0 门槛远程开卡？👉 查看 <a href="/bank/ph-maya"><strong>《菲律宾 Maya 数字银行》</strong></a> 或 <a href="/bank/remote-accounts"><strong>《英国 iFAST 银行远程开户》</strong></a></li>
+  <li>不想存 50 万也不想去香港，想用护照 0 门槛远程开卡？👉 查看 <a href="/bank/ph-maya"><strong>《菲律宾 Maya 数字银行》</strong></a> 或 <a href="/bank/ifast-global-bank"><strong>《英国 iFAST Global Bank 远程开户》</strong></a></li>
 </ul>
 
 </div>
