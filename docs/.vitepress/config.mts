@@ -42,6 +42,7 @@ const unifiedSidebar = [
       { text: '菲律宾 DITO（10元神卡）', link: '/sim/ph-dito' },
       { text: '香港 Club SIM（港卡搭档）', link: '/sim/hk-clubsim' },
       { text: '英国 Giffgaff（封卡预警）', link: '/sim/uk-giffgaff' },
+      { text: '英国 Asda Mobile（备选）', link: '/sim/uk-asda' },
       { text: 'eSIM / 保号卡横向对比', link: '/sim/esim-compare' }
     ]
   },
