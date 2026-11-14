@@ -10,7 +10,9 @@ const unifiedSidebar = [
       { text: '蚂蚁银行（澳门）', link: '/bank/ant-bank-macau' },
       { text: '渣打银行（免赴港见证）', link: '/bank/sc-bank' },
       { text: '恒生银行（免赴港·1带3）', link: '/bank/hangseng-bank' },
+      { text: '恒生银行（内地预申+激活）', link: '/bank/hangseng-remote' },
       { text: '汇丰银行（内地预申+激活）', link: '/bank/hk-hsbc-remote' },
+      { text: '招商永隆（内地预申+网点激活）', link: '/bank/cmb-wing-lung' },
       { text: '赴港开户一日通关攻略', link: '/bank/hk-walk-in' },
       { text: '18家香港银行对比总表', link: '/bank/hk-tier-guide' }
     ]
