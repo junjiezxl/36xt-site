@@ -31,6 +31,7 @@ const unifiedSidebar = [
     collapsed: false,
     items: [
       { text: '香港三卡组合怎么配', link: '/bank/hk-three-card' },
+      { text: '港卡在内地怎么花', link: '/bank/hk-card-mainland-spend' },
       { text: '首笔入金与激活避坑', link: '/bank/first-deposit' },
       { text: '港户入金嘉信与美股资金回流', link: '/bank/schwab-funding' },
       { text: '跨境资金闭环（合规版）', link: '/roadmap/compliant-fund-loop' }
@@ -96,9 +97,9 @@ export default defineConfig({
 
     nav: [
       { text: '首页', link: '/' },
-      { text: '🏦 港卡开户', link: '/bank/', activeMatch: '^/bank/(?!ph-maya|remote-accounts|ifast-global-bank|hk-three-card|first-deposit)' },
+      { text: '🏦 港卡开户', link: '/bank/', activeMatch: '^/bank/(?!ph-maya|remote-accounts|ifast-global-bank|hk-three-card|hk-card-mainland-spend|first-deposit)' },
       { text: '🌍 远程银行卡', link: '/bank/ph-maya', activeMatch: '^/bank/(ph-maya|remote-accounts|ifast-global-bank)' },
-      { text: '💳 港卡使用', link: '/bank/hk-three-card', activeMatch: '^/bank/(hk-three-card|first-deposit)' },
+      { text: '💳 港卡使用', link: '/bank/hk-three-card', activeMatch: '^/bank/(hk-three-card|hk-card-mainland-spend|first-deposit)' },
       { text: '📱 海外手机卡', link: '/sim/', activeMatch: '^/sim/' },
       { text: '🧭 新手路线图', link: '/roadmap/', activeMatch: '^/roadmap/' },
       { text: '📈 券商合规', link: '/broker/ibkr-guide', activeMatch: '^/broker/' }
